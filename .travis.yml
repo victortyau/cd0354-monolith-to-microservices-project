@@ -1,9 +1,21 @@
+branches:
+  only:
+    - master
+    - dev
 
-- docker build -t udagram-api-feed ./udagram-api-feed
+language: node_js
+node_js:
+  - 13
 
+services:
+  - docker
 
-- docker tag udagram-api-feed victortyau/udagram-api-feed:v1
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
 
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push victortyau/udagram-api-feed:v1
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
 

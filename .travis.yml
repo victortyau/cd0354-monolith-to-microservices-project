@@ -1,7 +1,6 @@
 branches:
   only:
-    - master
-    - dev
+    - main
 
 language: node_js
 node_js:

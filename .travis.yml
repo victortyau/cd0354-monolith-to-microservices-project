@@ -19,12 +19,12 @@ before_script:
 
 
 script:
+  - docker build -t udagram-frontend ./udagram-frontend
+  - docker tag udagram-frontend victortyau/udagram-frontend:v1
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed victortyau/udagram-api-feed:v1
   - docker build -t udagram-api-user ./udagram-api-user
   - docker tag udagram-api-user victortyau/udagram-api-user:v1
-  - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend victortyau/udagram-frontend:v1
   - docker build -t reverseproxy ./udagram-reverseproxy
   - docker tag reverseproxy victortyau/reverseproxy:v1
 

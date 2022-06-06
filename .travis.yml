@@ -1,0 +1,8 @@
+# Build
+- docker build -t udagram-api-feed ./udagram-api-feed
+
+# Tagging
+- docker tag udagram-api-feed sudkul/udagram-api-feed:v1
+
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push sudkul/udagram-api-feed:v1

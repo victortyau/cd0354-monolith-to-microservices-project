@@ -26,4 +26,4 @@ script:
 after_success:
   - docker images
   - echo "$DOCKER_PASSWORD" | docker login --username="$DOCKER_USERNAME" --password-stdin
-  - docker push victortyau/udagram-api-feed:v1
+  - docker image push victortyau/udagram-api-feed:v1
